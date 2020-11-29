@@ -42,7 +42,7 @@ namespace CrudGenerator
                 new Relation("Parent", "Child", RelationType.OneToMany, DeleteBehavior.Restrict, false),
                 new Relation("Child", "Teacher", RelationType.ManyToMany, DeleteBehavior.Restrict, false)
             });
-            var directoryInfo = new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), Namespace));
+            var directoryInfo = new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "Generated"));
             if (directoryInfo.Exists)
             {
                 directoryInfo.Delete(true);
